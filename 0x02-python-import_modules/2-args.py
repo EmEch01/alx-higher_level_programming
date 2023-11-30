@@ -11,6 +11,6 @@ def main():
     for i, arg in enumerate(argv[1:], start=1):
         print("{}: {}".format(i, arg))
 
-
+# prevent code from being executed when called via import
 if __name__ == "__main__":
     main()
