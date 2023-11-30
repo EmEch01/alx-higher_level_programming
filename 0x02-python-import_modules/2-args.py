@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from sys import argv
 
+from sys import argv
 
 def main():
 # Get the number of args
