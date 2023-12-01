@@ -1,20 +1,15 @@
 #!/usr/bin/python3
 
-from sys import argv
-
-
-def main():
-    # Get the number of args
-    args = len(argv[1:])
-
-    # Print the number and list of args
-    if args == 0:
-        print("0 arguments.")
-    else:
-        print("{} argument{}:".format(args, 's' if args > 1 else ''))
-        for i, arg in enumerate(argv[1:], start=1):
-            print("{}: {}".format(i, arg))
-
-# code should not be executed when called via import
 if __name__ == "__main__":
-    main()
+    """Print the number of and list of arguments."""
+    import sys
+
+    count = len(sys.argv) - 1
+    if count == 0:
+        print("0 arguments.")
+    elif count == 1:
+        print("1 argument:")
+    else:
+        print("{} arguments".format(count))
+    for i in range(count):
+        print("{}: {}".format(i + 1, sys.argv[i + 1]))
